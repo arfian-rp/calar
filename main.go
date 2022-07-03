@@ -27,7 +27,7 @@ func main() {
 		CALAR v1
 website			: https://arfian-id.web.app
 instagram		: https://instagram.com/arfian_rp_
-github		:	 https://github.com/arfian-rp/calar`)
+github			: https://github.com/arfian-rp/calar`)
 	case "init":
 		CreateInit(pwd)
 	default:
