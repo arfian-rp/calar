@@ -36,7 +36,7 @@ github			: https://github.com/arfian-rp/calar`)
 
 }
 func CreateInit(pwd string) {
-	if _, err := os.Stat("/path/to/whatever"); err != nil {
+	if _, err := os.Stat(pwd + filename); err != nil {
 		f, err := os.Create(pwd + filename)
 		if err != nil {
 			panic(err)
