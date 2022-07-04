@@ -17,23 +17,25 @@ func main() {
 	args := os.Args
 	pwd, err := os.Getwd()
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		panic(err)
 	}
 
 	switch args[1] {
 	case "info":
-		fmt.Println(`
-		CALAR v1
-website			: https://arfian-id.web.app
-instagram		: https://instagram.com/arfian_rp_
-github			: https://github.com/arfian-rp/calar`)
+		ShowInfo()
 	case "init":
 		CreateInit(pwd)
 	default:
 		fmt.Println(RunScript(pwd, args))
 	}
 
+}
+func ShowInfo() {
+	fmt.Println(`
+	CALAR v1
+website			: https://arfian-id.web.app
+instagram		: https://instagram.com/arfian_rp_
+github			: https://github.com/arfian-rp/calar`)
 }
 func CreateInit(pwd string) {
 	if _, err := os.Stat(pwd + filename); err != nil {
